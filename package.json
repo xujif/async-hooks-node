@@ -1,0 +1,33 @@
+{
+  "name": "async-hooks-node",
+  "version": "0.0.1",
+  "main": "dist/node.js",
+  "types": "dist/node.d.ts",
+  "homepage": "https://github.com/xujif/async-hooks-node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xujif/async-hooks-node.git"
+  },
+  "description": "track async-hooks execution as linked-list.",
+  "keywords": [
+    "async-hooks",
+    "thread local",
+    "async context"
+  ],
+  "scripts": {
+    "compile": "tsc",
+    "tslint": "tslint --project .",
+    "prepack": "rimraf dist && npm run tslint && npm run compile",
+    "test": "mocha --require espower-typescript/guess test/**/*.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.5",
+    "espower-typescript": "^9.0.2",
+    "mocha": "^6.2.0",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.6.3"
+  }
+}
